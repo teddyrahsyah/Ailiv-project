@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        style="@style/Theme.Ailiv.TextFont"
+        android:id="@+id/tv_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:text="@string/dashboard_text"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/no_data_image"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dashboard"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/tv_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dashboard"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        style="@style/Theme.Ailiv.TextFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/no_data_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_no_data"
+        app:layout_constraintStart_toStartOf="@+id/iv_no_data"
+        app:layout_constraintTop_toBottomOf="@+id/iv_no_data" />
+
+    <TextView
+        style="@style/Theme.Ailiv.TextFont"
+        android:id="@+id/tv_entry_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="@string/entry_food_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_no_data"
+        app:layout_constraintStart_toStartOf="@+id/tv_no_data"
+        app:layout_constraintTop_toBottomOf="@+id/tv_no_data" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:contentDescription="@string/upload_image_button"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_upload_white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

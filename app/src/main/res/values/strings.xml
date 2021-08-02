@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Ailiv</string>
+    <string name="username_text">Username</string>
+    <string name="password_text">Password</string>
+
+    <!--  String Text  -->
+    <string name="begin_text">Let\'s We Begin!</string>>
+    <string name="entry_age_text">Enter your age</string>
+    <string name="gender_text">Gender</string>
+    <string name="male_text">Male</string>
+    <string name="female_text">Female</string>
+    <string name="continue_text">Continue</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="dashboard_text">Dashboard</string>
+    <string name="no_data_text">No Data</string>
+    <string name="entry_food_text">Please Entry Your Food</string>
+
+    <!--  Image Content Description  -->
+    <string name="brand_logo_image">Brand Logo</string>
+    <string name="no_data_image">No Data Image</string>
+    <string name="upload_image_button">Upload Image Button</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="pick_image_button">Pick Image Button</string>
+    <string name="age_text">age</string>
+</resources>
