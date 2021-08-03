@@ -12,18 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ailiv">
         <activity
-            android:name=".ui.DashboardActivity"
-            android:label="@string/title_activity_dashboard"
-            android:theme="@style/Theme.Ailiv.NoActionBar" />
-        <activity android:name=".ui.InputFormActivity" >
+            android:name=".ui.splashscreen.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity">
-        </activity>
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.Ailiv.NoActionBar" />
+        <activity android:name=".ui.InputFormActivity" />
+        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>

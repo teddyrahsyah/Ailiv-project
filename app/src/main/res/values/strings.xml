@@ -4,7 +4,9 @@
     <string name="password_text">Password</string>
 
     <!--  String Text  -->
+    <string name="welcome_text">Welcome,\n%s\n(%s, %s years old)</string>
     <string name="begin_text">Let\'s We Begin!</string>>
+    <string name="age_text">age</string>
     <string name="entry_age_text">Enter your age</string>
     <string name="gender_text">Gender</string>
     <string name="male_text">Male</string>
@@ -21,11 +23,9 @@
     <string name="upload_image_button">Upload Image Button</string>
     <string name="title_activity_dashboard">DashboardActivity</string>
 
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="pick_other_food">Pick Other Food</string>
     <string name="pick_image_button">Pick Image Button</string>
-    <string name="age_text">age</string>
+    <string name="logout_text">Logout</string>
+    <string name="ailiv_project">Ailiv Project</string>
+
 </resources>

@@ -4,14 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/drawable/bg_gradient.xml" value="0.290625" />
+        <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/drawable/bg_gradient_diagon.xml" value="0.290625" />
+        <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/drawable/bg_gradient_vert.xml" value="0.290625" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/activity_input_form.xml" value="0.264" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/activity_main.xml" value="0.1334853090172239" />
+        <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/content_dashboard.xml" value="0.136" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/fragment_dashboard.xml" value="0.2667572463768116" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/fragment_first.xml" value="0.2667572463768116" />
-        <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/fragment_pick_image.xml" value="0.26358695652173914" />
+        <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/fragment_pick_image.xml" value="0.264" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/item_nutrition_list.xml" value="0.26358695652173914" />
+        <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/menu/main_menu.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

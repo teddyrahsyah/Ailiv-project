@@ -45,11 +45,25 @@ class DashboardFragment : Fragment() {
             val viewModel = ViewModelProvider(this, factory)[DashboardViewModel::class.java]
 
             var filename: String? = null
-            if (dataFoodname.contains("nasi_goreng")) {
-                filename = dataFoodname.replace("jpeg", "json")
+            var foodname: String? = null
+
+            when {
+                dataFoodname.contains("Nasi_Goreng") -> {
+                    filename = dataFoodname.replace("jpeg", "json")
+                    foodname = filename.dropLast(5).replace("_"," ")
+                }
+                dataFoodname.contains("Rendang") -> {
+                    filename = dataFoodname.replace("jpeg", "json")
+                    foodname = filename.dropLast(5)
+                }
+                dataFoodname.contains("Oatmeal") -> {
+                    filename = dataFoodname.replace("jpeg", "json")
+                    foodname = filename.dropLast(5)
+                }
             }
 
-            val nutrition = viewModel.getNutrition(filename ?: "nasi_goreng.json")
+            binding.tvFoodname.text = foodname?.replaceFirstChar { it.uppercase() }
+            val nutrition = viewModel.getNutrition(filename?.lowercase() ?: "nasi_goreng.json")
 
             // Get Daily Nutrients from Preference
             getDailyNutrient()
