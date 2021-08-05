@@ -80,7 +80,8 @@
         android:layout_marginEnd="16dp"
         android:src="@drawable/brand_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/brand_logo_image" />
 
     <TextView
         android:id="@+id/tv_welcome"

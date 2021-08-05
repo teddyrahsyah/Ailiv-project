@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import id.develo.ailiv.data.source.NutritionRepository
 import id.develo.ailiv.di.Injection
 import id.develo.ailiv.ui.dashboard.DashboardViewModel
+import id.develo.ailiv.ui.warning.WarningViewModel
 
 class ViewModelFactory private constructor(private val mNutritionRepository: NutritionRepository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -27,6 +28,9 @@ class ViewModelFactory private constructor(private val mNutritionRepository: Nut
         when {
             modelClass.isAssignableFrom(DashboardViewModel::class.java) -> {
                 return DashboardViewModel(mNutritionRepository) as T
+            }
+            modelClass.isAssignableFrom(WarningViewModel::class.java) -> {
+                return WarningViewModel(mNutritionRepository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

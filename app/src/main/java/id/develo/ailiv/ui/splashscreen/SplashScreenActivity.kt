@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import id.develo.ailiv.R
-import id.develo.ailiv.ui.InputFormActivity
-import id.develo.ailiv.ui.MainActivity
+import id.develo.ailiv.ui.authentication.LoginActivity
+import id.develo.ailiv.ui.authentication.RegisterActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -18,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             // You can declare your desire activity here to open after finishing splash screen. Like MainActivity
-            val intent = Intent(this, InputFormActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, timeOut)

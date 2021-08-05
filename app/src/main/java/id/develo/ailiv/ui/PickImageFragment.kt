@@ -5,9 +5,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.view.*
-import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import id.develo.ailiv.R
@@ -28,6 +30,8 @@ class PickImageFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private lateinit var mNutrientPreference: NutrientPreference
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,25 +45,29 @@ class PickImageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        mNutrientPreference = NutrientPreference(requireContext())
+
         Glide.with(requireActivity())
             .load(R.drawable.no_data)
             .into(binding.ivNoData)
 
         // Get Daily Nutrients from Preference
-        val user = getUserData()
+        val user = mNutrientPreference.getUserData()
 
-        val welcomeText = getString(R.string.welcome_text, user[0], user[1], user[2])
+        val welcomeText =
+            getString(R.string.welcome_text, user.username, user.gender, user.age.toString())
 
         binding.tvWelcome.text = welcomeText
 
-        val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                // There are no request codes
-                val data: Uri? = result.data?.data
-                val fileName = File(data?.path).name
-                intentToDashboardResult(fileName)
+        val resultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                if (result.resultCode == Activity.RESULT_OK) {
+                    // There are no request codes
+                    val data: Uri? = result.data?.data
+                    val fileName = File(data?.path).name
+                    intentToDashboardResult(fileName)
+                }
             }
-        }
 
         binding.fabPickImage.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
@@ -67,22 +75,6 @@ class PickImageFragment : Fragment() {
             resultLauncher.launch(intent)
 
         }
-    }
-
-    private fun getUserData(): ArrayList<String> {
-        val mNutrientPreference = NutrientPreference(requireContext())
-        val userData = mNutrientPreference.getDailyNutrient()
-
-        val listUserData = ArrayList<String>()
-
-        val username = userData.username
-        val gender = userData.gender
-        val age = userData.age
-
-        listUserData.add(username.toString())
-        listUserData.add(gender.toString())
-        listUserData.add(age.toString())
-        return listUserData
     }
 
     private fun intentToDashboardResult(filename: String) {

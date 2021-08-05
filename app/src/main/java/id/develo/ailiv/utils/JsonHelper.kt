@@ -2,6 +2,7 @@ package id.develo.ailiv.utils
 
 import android.content.Context
 import id.develo.ailiv.data.source.local.entity.NutritionEntity
+import id.develo.ailiv.data.source.local.entity.WarningEntity
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -43,5 +44,23 @@ class JsonHelper(private val context: Context) {
             e.printStackTrace()
         }
         return listNutrition
+    }
+
+    fun loadWarning(filename: String): WarningEntity {
+        var warningValue = WarningEntity()
+
+        try {
+            val result = parsingFileToString(filename)
+            if (result != null) {
+                val warningObject = JSONObject(result)
+                val name = warningObject.getString("name")
+                val warningMessage = warningObject.getString("warning")
+
+                 warningValue = WarningEntity(name, warningMessage)
+            }
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+        return warningValue
     }
 }

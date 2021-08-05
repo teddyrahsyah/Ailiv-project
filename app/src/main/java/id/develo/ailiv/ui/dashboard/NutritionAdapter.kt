@@ -5,16 +5,16 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import id.develo.ailiv.data.source.local.entity.NutritionEntity
+import id.develo.ailiv.data.source.local.entity.AccumulatedNutrient
 import id.develo.ailiv.databinding.ItemNutritionListBinding
 import kotlin.collections.ArrayList
 import kotlin.math.roundToInt
 
-class NutritionAdapter(private val listDailyNutrient: ArrayList<Float>) : RecyclerView.Adapter<NutritionAdapter.NutritionViewHolder>() {
+class NutritionAdapter : RecyclerView.Adapter<NutritionAdapter.NutritionViewHolder>() {
 
-    private var listNutrition = ArrayList<NutritionEntity>()
+    private var listNutrition = ArrayList<AccumulatedNutrient>()
 
-    fun setNutrition(nutrition: List<NutritionEntity>?) {
+    fun setNutrition(nutrition: List<AccumulatedNutrient>?) {
         if (nutrition == null) return
         this.listNutrition.clear()
         this.listNutrition.addAll(nutrition)
@@ -28,26 +28,22 @@ class NutritionAdapter(private val listDailyNutrient: ArrayList<Float>) : Recycl
 
     override fun onBindViewHolder(holder: NutritionViewHolder, position: Int) {
         val nutrition = listNutrition[position]
-        val dailyNutrient = listDailyNutrient[position]
-        holder.bind(nutrition, dailyNutrient)
+        holder.bind(nutrition)
     }
 
-    override fun getItemCount(): Int = listDailyNutrient.size
+    override fun getItemCount(): Int = listNutrition.size
 
     inner class NutritionViewHolder(private val binding: ItemNutritionListBinding) :
         RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SetTextI18n")
-        fun bind(nutrition: NutritionEntity, dailyNutrient: Float) {
+        fun bind(nutrition: AccumulatedNutrient) {
             with(binding) {
                 tvName.text = nutrition.name
-                val nutritionCalculation = ((nutrition.value / dailyNutrient) * 100)
-                tvValue.text = nutritionCalculation.roundToInt().toString() + "%"
-
-//                Log.d("TEST AGAIN", rounded.toString())
+                tvValue.text = nutrition.accumulatedValue.roundToInt().toString() + "%"
 
                 progressBar.apply {
                     progressMax = 100F
-                    setProgressWithAnimation((nutrition.value.toFloat() / dailyNutrient) * 100, 1500)
+                    setProgressWithAnimation(nutrition.accumulatedValue.toFloat(), 1500)
                     progressBarWidth = 5F
                     backgroundProgressBarWidth = 10F
                     progressBarColor = Color.GREEN

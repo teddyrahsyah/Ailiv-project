@@ -12,8 +12,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import id.develo.ailiv.R
+import id.develo.ailiv.data.source.local.NutrientPreference
 import id.develo.ailiv.databinding.ActivityDashboardBinding
-import id.develo.ailiv.ui.InputFormActivity
+import id.develo.ailiv.ui.authentication.LoginActivity
+import id.develo.ailiv.ui.authentication.RegisterActivity
+import id.develo.ailiv.utils.Constant
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -49,25 +52,23 @@ class DashboardActivity : AppCompatActivity() {
         // Handle item selection
         return when (item.itemId) {
             R.id.action_logout -> {
-                clearPreferences()
-                intentToFormActivity()
+                logoutUser()
+                intentToLoginActivity()
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
-    private fun intentToFormActivity() {
-        Intent(this@DashboardActivity, InputFormActivity::class.java).also {
+    private fun intentToLoginActivity() {
+        Intent(this@DashboardActivity, LoginActivity::class.java).also {
             startActivity(it)
         }
         finish()
     }
 
-    private fun clearPreferences() {
-        val preferences = getSharedPreferences("nutrient_pref", Context.MODE_PRIVATE)
-        val editor = preferences.edit()
-        editor.clear()
-        editor.apply()
+    private fun logoutUser() {
+        val mNutrientPreference = NutrientPreference(this)
+        mNutrientPreference.setLoginState(false)
     }
 }

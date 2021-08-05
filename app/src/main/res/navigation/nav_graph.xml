@@ -35,5 +35,16 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_warningActivity"
+            app:destination="@id/warningActivity" />
     </fragment>
+    <activity
+        android:id="@+id/warningActivity"
+        android:name="id.develo.ailiv.ui.warning.WarningActivity"
+        android:label="@string/app_name"
+        tools:layout="@layout/activity_warning" >
+        <argument android:name="warningData"
+            app:argType="string[]" />
+    </activity>
 </navigation>

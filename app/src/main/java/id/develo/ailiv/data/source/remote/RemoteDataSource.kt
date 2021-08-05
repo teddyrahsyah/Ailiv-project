@@ -1,6 +1,7 @@
 package id.develo.ailiv.data.source.remote
 
 import id.develo.ailiv.data.source.local.entity.NutritionEntity
+import id.develo.ailiv.data.source.local.entity.WarningEntity
 import id.develo.ailiv.utils.JsonHelper
 
 class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
@@ -16,5 +17,7 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
     }
 
     fun getNutrition(filename: String): List<NutritionEntity> = jsonHelper.loadNutrition(filename)
+
+    fun getWarning(filename: String): WarningEntity = jsonHelper.loadWarning(filename)
 
 }
