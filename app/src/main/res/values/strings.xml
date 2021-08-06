@@ -32,5 +32,6 @@
     <string name="register_an_account_text">Register an account</string>
     <string name="start_new_account_text">Start New Account!</string>
     <string name="warning_text">WARNING</string>
+    <string name="notes_text">Notes: Hanya Bisa 3 Makanan (Nasi Goreng, Oatmeal, Rendang, Batagor, dan Spaghetti) dengan nama file Nasi_Goreng.jpeg, Oatmeal.jpeg, Rendang.jpeg, Batagor.jpeg, dan Spaghetti.jpeg</string>
 
 </resources>

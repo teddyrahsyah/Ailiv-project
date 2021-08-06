@@ -24,8 +24,7 @@ class WarningActivity : AppCompatActivity() {
         supportActionBar?.title = getString(R.string.app_name)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
-
+        // Get Data from Dashboard (Nutrtion Over)
         val warningData = WarningActivityArgs.fromBundle(intent.extras as Bundle).warningData
         warningData.toList()
 

@@ -68,6 +68,14 @@ class DashboardFragment : Fragment() {
                     filename = dataFoodname.replace("jpeg", "json")
                     foodname = filename.dropLast(5)
                 }
+                dataFoodname.contains("Batagor") -> {
+                    filename = dataFoodname.replace("jpeg", "json")
+                    foodname = filename.dropLast(5)
+                }
+                dataFoodname.contains("Spaghetti") -> {
+                    filename = dataFoodname.replace("jpeg", "json")
+                    foodname = filename.dropLast(5)
+                }
             }
 
             binding.tvFoodname.text = foodname?.replaceFirstChar { it.uppercase() }

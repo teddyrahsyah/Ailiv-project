@@ -1,0 +1,28 @@
+{
+  "data" : [
+    {
+      "name" : "lemak",
+      "value" : 2.1
+    },
+    {
+      "name" : "Kalori",
+      "value" : 158
+    },
+    {
+      "name" : "Kolesterol",
+      "value" : 0
+    },
+    {
+      "name" : "Protein",
+      "value" : 6
+    },
+    {
+      "name" : "Karbohidrat",
+      "value" : 31
+    },
+    {
+      "name" : "Sodium",
+      "value" : 1
+    }
+  ]
+}
