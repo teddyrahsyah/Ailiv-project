@@ -12,22 +12,31 @@
         style="@style/Theme.Ailiv.TextFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="@string/warning_text"
         android:textSize="28sp"
+        app:drawableEndCompat="@drawable/ic_warning"
+        app:drawableStartCompat="@drawable/ic_warning" />
+
+    <TextView
+        style="@style/Theme.Ailiv.TextFont"
+        android:id="@+id/tv_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_warning"
+        android:layout_marginEnd="16dp"
         android:layout_centerHorizontal="true"
-        app:drawableStartCompat="@drawable/ic_warning"
-        app:drawableEndCompat="@drawable/ic_warning" />
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        android:text="@string/alert_eat_text" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_warning"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_below="@id/tv_alert"
+        android:layout_margin="16dp"
         tools:listitem="@layout/item_warning_list" />
 
 </RelativeLayout>

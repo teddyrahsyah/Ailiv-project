@@ -3,6 +3,7 @@ package id.develo.ailiv.ui.warning
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +29,9 @@ class WarningActivity : AppCompatActivity() {
         val warningData = WarningActivityArgs.fromBundle(intent.extras as Bundle).warningData
         warningData.toList()
 
+        binding.tvAlert.visibility = View.VISIBLE
+        binding.tvAlert.text = WarningActivityArgs.fromBundle(intent.extras as Bundle).alertText
+
         val factory = ViewModelFactory.getInstance(this)
         val viewModel = ViewModelProvider(this, factory)[WarningViewModel::class.java]
 
@@ -36,6 +40,7 @@ class WarningActivity : AppCompatActivity() {
             val filename = warningData[i] + ".json"
             val data = viewModel.getWarning(filename)
             listWarning.add(data)
+
             Log.d("DATA 1", data.name.toString())
             Log.d("DATA 2", data.warningMessage.toString())
         }

@@ -20,10 +20,13 @@
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/item_nutrition_list.xml" value="0.26358695652173914" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/layout/item_warning_list.xml" value="0.264" />
         <entry key="..\:/Dev/AilivProject/Ailiv/app/src/main/res/menu/main_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/StudioProjects/Ailiv-project/app/src/main/res/layout/activity_warning.xml" value="0.4" />
+        <entry key="..\:/Users/ASUS/StudioProjects/Ailiv-project/app/src/main/res/layout/fragment_pick_image.xml" value="0.20108695652173914" />
+        <entry key="..\:/Users/ASUS/StudioProjects/Ailiv-project/app/src/main/res/layout/item_warning_list.xml" value="0.21195652173913043" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

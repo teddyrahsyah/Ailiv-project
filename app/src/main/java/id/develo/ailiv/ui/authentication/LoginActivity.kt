@@ -70,6 +70,7 @@ class LoginActivity : AppCompatActivity() {
                 Intent(this@LoginActivity, DashboardActivity::class.java).also {
                     startActivity(it)
                 }
+                finish()
             }
 
         }
@@ -81,6 +82,7 @@ class LoginActivity : AppCompatActivity() {
             Intent(this@LoginActivity, DashboardActivity::class.java).also {
                 startActivity(it)
             }
+            finish()
         }
     }
 }
