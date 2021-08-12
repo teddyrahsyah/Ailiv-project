@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import id.develo.ailiv.R
 import id.develo.ailiv.data.source.local.NutrientPreference
 import id.develo.ailiv.data.source.local.entity.AccumulatedNutrient
 import id.develo.ailiv.data.source.local.entity.UserModelEntity
@@ -190,17 +189,9 @@ class DashboardFragment : Fragment() {
         if (accKarbohidrat > 100) listWarning.add("karbohidrat")
         if (accSodium > 100) listWarning.add("sodium")
 
-        // dasawdadawdad
-        var text: String? = null
-        if (accKolestrol > 50) {
-            text = getString(R.string.alert_eat_text)
-        } else if (accKolestrol < 50) {
-            text = getString(R.string.allow_eat_text)
-        }
         binding.btnWarning.setOnClickListener {
             val toWarningActivity =
                 DashboardFragmentDirections.actionDashboardFragmentToWarningActivity(listWarning.toTypedArray())
-            toWarningActivity.alertText = text.toString()
             findNavController().navigate(toWarningActivity)
         }
     }

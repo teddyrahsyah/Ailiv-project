@@ -35,5 +35,9 @@
     <string name="notes_text">Notes: Hanya Bisa 5 Makanan (Nasi Goreng, Oatmeal, Rendang, Batagor, dan Spaghetti) dengan nama file Nasi_Goreng.jpeg, Oatmeal.jpeg, Rendang.jpeg, Batagor.jpeg, dan Spaghetti.jpeg</string>
     <string name="alert_eat_text">Anda sudah cukup makan hari ini</string>
     <string name="allow_eat_text">Anda boleh makan lagi</string>
+    <string name="saran_makan_text">Saran Makan</string>
+    <string name="suggestion_text">Kalori</string>
+    <string name="suggestion_value">2100 </string>
+    <string name="saran_makan">Saran Makan</string>
 
 </resources>

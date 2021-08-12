@@ -46,9 +46,5 @@
         tools:layout="@layout/activity_warning" >
         <argument android:name="warningData"
             app:argType="string[]" />
-        <argument
-            android:name="alertText"
-            app:argType="string"
-            android:defaultValue="default" />
     </activity>
 </navigation>

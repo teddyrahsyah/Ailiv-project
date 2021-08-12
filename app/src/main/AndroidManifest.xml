@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ailiv">
         <activity
+            android:name=".ui.suggestion.SuggestionActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.warning.WarningActivity"
             android:exported="true" />
         <activity
